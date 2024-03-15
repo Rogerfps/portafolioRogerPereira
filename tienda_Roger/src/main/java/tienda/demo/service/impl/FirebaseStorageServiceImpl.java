@@ -24,6 +24,7 @@ import static tienda.demo.service.FirebaseStorageService.rutaSuperiorStorage;
 
 @Service
 public class FirebaseStorageServiceImpl implements FirebaseStorageService {
+    @Override
     public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id) {
         try {
             // El nombre original del archivo local del cliene
@@ -74,10 +75,5 @@ public class FirebaseStorageServiceImpl implements FirebaseStorageService {
     //Método utilitario para obtener un string con ceros....
     private String sacaNumero(long id) {
         return String.format("%019d", id);
-    }
-
-    @Override
-    public String cargarImagen(MultipartFile archivoLocalCliente, String carpeta, Long id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
