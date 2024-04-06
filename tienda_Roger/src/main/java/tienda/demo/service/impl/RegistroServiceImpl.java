@@ -17,11 +17,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.multipart.MultipartFile;
-/**
- *
- * @author roger
- */
+
+@Service
 public class RegistroServiceImpl implements RegistroService {
+
     @Autowired
     private CorreoService correoService;
     @Autowired
@@ -191,3 +190,4 @@ public class RegistroServiceImpl implements RegistroService {
                 asunto, mensaje);
     }
 }
+
